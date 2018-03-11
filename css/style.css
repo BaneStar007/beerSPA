@@ -1,0 +1,47 @@
+.mainPage {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 35px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.leftPane {
+    display: grid;
+    min-width: 200px;
+    float: left;
+    padding: 30px;
+    margin: 30px;
+    background-color: white;
+    box-shadow: 3px 3px 3px grey;
+}
+.rightPane {
+    display: grid;
+    min-width: 200px;
+    float: left;
+}
+
+.repeatedItems {
+   display: inline-flex;
+    
+}
+.repeatedItems .item {
+    max-width: 24%;
+    position: relative
+}
+.information {
+    position: relative
+}
+.repeatedItems label, label {
+    font-size: 10px;
+    color: blue;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.repeatedItems input, input {
+    border: none;
+    background-color: aliceblue;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}

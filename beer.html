@@ -13,9 +13,44 @@
 
 <body ng-app="beerSPA" ng-controller="beerControl">
 
-  {{pageData | json}}
+  <header data="headerData"></header>
+  <menugui>
+    <menu data="menu"></menu>
+    <div class="mainPage">
+      <div class="leftPane">
 
-  <button ng-click="data()">Click me</button>
+      </div>
+      <div class="rightPane">
+        <div class="row title">
+          <h2>{{beerData.name}}</h2>
+        </div>
+        <div class="row description">
+          <p>{{beerData.style.description}}</p>
+        </div>
+        <div class="repeatedItems">
+          <div class="item " ng-repeat="beerStats in beerData.stats">
+
+            <input name="{{beerStats.name}}" type="text" value="{{beerStats.ave}}" readonly />
+            <label for="{{beerStats.name}}">{{beerStats.name}}</label>
+          </div>
+        </div>
+        <div class="row information">
+
+          <input name="style" type="text" value="{{beerData.style.name}}" readonly />
+          <label for="style">Style</label>
+        </div>
+        <div class="row information">
+
+          <input name="brewer" type="text" value="{{beerData.style.category.name}}" readonly />
+          <label for="brewer">Style</label>
+        </div>
+        ></div>
+    </div>
+    </div>
+  </menugui>
+
+
+
 </body>
 
 </html>
